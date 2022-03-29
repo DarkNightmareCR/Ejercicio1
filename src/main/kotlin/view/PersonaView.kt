@@ -30,39 +30,20 @@ class PersonaView {
         cosa3.peso=55.5F
         cosa3.altura=1.60F
         println("objeto 1 posee ")
-        calcularPM(cosa1)
+        p.calcularPM(cosa1)
         println("objeto 2 posee ")
-        calcularPM(cosa2)
+        p.calcularPM(cosa2)
         println("objeto 3 posee ")
-        calcularPM(cosa3)
+        p.calcularPM(cosa3)
         println("/////////////////")
-        Mayor(cosa1)
-        Mayor(cosa2)
-        Mayor(cosa3)
+        p.Mayor(cosa1)
+        p.Mayor(cosa2)
+        p.Mayor(cosa3)
         println("/////////////////")
         println(p.toString(cosa1))
         println(p.toString(cosa2))
         println(p.toString(cosa3))
 
     }
-    fun calcularPM(p1:Persona){
-        var pc=PersonaController()
-        var R = pc.calcularIMC(p1)
-        if(R==-1){
-            println("Bajo Peso")
-        }else if(R==0){
-            println("Peso Normal")
-        }else{
-            println("Sobrepeso")
-        }
-    }
-    fun Mayor(p1:Persona){
-        var pc=PersonaController()
-        var R = pc.esMayorDeEdad(p1)
-        if(R==true){
-            println("Es Mayor de Edad ")
-        }else{
-            println("Es menor de Edad ")
-        }
-    }
+
 }

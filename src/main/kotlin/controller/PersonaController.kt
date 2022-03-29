@@ -37,6 +37,25 @@ class PersonaController {
         all+="Altura: "+persona.altura+"\n"
         return all
     }
-
+    fun calcularPM(p1:Persona){
+        var pc=PersonaController()
+        var R = pc.calcularIMC(p1)
+        if(R==-1){
+            println("Bajo Peso")
+        }else if(R==0){
+            println("Peso Normal")
+        }else{
+            println("Sobrepeso")
+        }
+    }
+    fun Mayor(p1:Persona){
+        var pc=PersonaController()
+        var R = pc.esMayorDeEdad(p1)
+        if(R==true){
+            println("Es Mayor de Edad ")
+        }else{
+            println("Es menor de Edad ")
+        }
+    }
 
 }
